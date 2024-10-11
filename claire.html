@@ -8,7 +8,6 @@
 <body>
 
 <!-- question 2 -->
-    <!-- Button first -->
     <button id="firstButton">firstButton</button>
 
 <!-- question 3 -->
@@ -84,24 +83,11 @@
     });
 
     //question 6//
-    // var fontButtonOne = value.getElementById("font1");
-    // var fontButtonTwo = value.getElementById("font2");
-    // var fontButtonThree = value.getElementById("font3");
-
-
-    var fontselect = document.getElementById("fontselect");
+      var fontselect = document.getElementById("fontselect");
     fontselect.addEventListener('change', () => {
-        
-        //document.getElementById("font").style.font = fontselect.value;
         document.getElementById("font").style['font-family'] = fontselect.value;
     });
-    // fontButtonTwo.addEventListener('click', () => {
-    //     value.getElementById("font").style.font = "times new roman";
-    // });
-    // fontButtonThree.addEventListener('click', () => {
-    //     value.getElementById("font").style.font = "veranda";
-    // });
-
+   
 </script>
 
 </html>
