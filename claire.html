@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Example</title>
+</head>
+<body>
+
+<!-- question 2 -->
+    <!-- Button first -->
+    <button id="firstButton">firstButton</button>
+
+<!-- question 3 -->
+        <h4 id="number">0</h4>
+        <button id="incrementButton">Increment</button>
+
+<!-- question 4 -->
+    <p id = "color" style="color:red;">experiment with color</p> 
+    <button id="colorButtonOne">colorButtonOne</button>
+    <button id="colorButtonTwo">colorButtonTwo</button>
+    <button id="colorButtonThree">colorButtonThree</button>
+    <br><br>
+<!-- question 5 -->
+    <label for="input">Text: </label>
+    <input type="text" id="input" name ="input" ><br><br>
+    <button id="inputButton">inputButton</button>
+
+<!-- question 6 -->
+    <p id = "font" >experiment with fonts</p> 
+    <select name = "select fonts" id="fontselect">
+        <option value = "georgia" > font 1 </option>
+        <option value = "times new roman" > font 2 </option>
+        <option value = "verdana" > font 3 </option>
+    </select>
+        
+</body>
+
+<script>
+    //question 2//
+    var firstButton = document.getElementById("firstButton");
+
+    firstButton.addEventListener('click', () => {
+        var text = document.createElement('p');
+        text.textContent = "You pressed a button!";
+        document.body.appendChild(text); 
+    })
+
+    
+    //question 3//
+    
+    var number = document.getElementById("number");
+    var incrementButton = document.getElementById("incrementButton");
+
+    incrementButton.addEventListener('click', () => {
+        var currentValue = parseInt(number.innerText);
+        currentValue += 1;
+        number.innerText = currentValue;
+    });
+
+    //question 4//
+    var colorButtonOne = document.getElementById("colorButtonOne");
+    var colorButtonTwo = document.getElementById("colorButtonTwo");
+    var colorButtonThree = document.getElementById("colorButtonThree");
+    var color = document.getElementById("color");
+    
+    colorButtonOne.addEventListener('click', () => {
+        document.getElementById("color").style.color = "blue";
+    });
+    colorButtonTwo.addEventListener('click', () => {
+        document.getElementById("color").style.color = "orange";
+    });
+    colorButtonThree.addEventListener('click', () => {
+        document.getElementById("color").style.color = "green";
+    });
+
+    //question 5//
+    var inputButton = document.getElementById("inputButton");
+    var input = document.getElementById("input");
+    inputButton.addEventListener('click', () => {
+        var text = document.createElement('p');
+        text.textContent = input.value;
+        document.body.appendChild(text); 
+    });
+
+    //question 6//
+    // var fontButtonOne = value.getElementById("font1");
+    // var fontButtonTwo = value.getElementById("font2");
+    // var fontButtonThree = value.getElementById("font3");
+
+
+    var fontselect = document.getElementById("fontselect");
+    fontselect.addEventListener('change', () => {
+        
+        //document.getElementById("font").style.font = fontselect.value;
+        document.getElementById("font").style['font-family'] = fontselect.value;
+    });
+    // fontButtonTwo.addEventListener('click', () => {
+    //     value.getElementById("font").style.font = "times new roman";
+    // });
+    // fontButtonThree.addEventListener('click', () => {
+    //     value.getElementById("font").style.font = "veranda";
+    // });
+
+</script>
+
+</html>
